@@ -44,11 +44,10 @@ z-index:2;
 /* hoa */
 
 .rose{
-width:520px;
-filter:
-drop-shadow(0 0 60px #ff2e6a)
-brightness(1.1)
-contrast(1.1);
+width:460px;
+max-width:90%;
+height:auto;
+image-rendering:auto;
 }
 
 @keyframes roseIntro{
@@ -269,7 +268,7 @@ box-shadow:0 0 70px rgba(255,0,90,0.9);
 <!-- HOA -->
 
 <img class="rose"
-src="https://drive.google.com/uc?export=view&id=1201Gjl5tzh_hw-A4NkWID5w4EVwF3jj1">
+src="https://drive.google.com/uc?export=download&id=1201Gjl5tzh_hw-A4NkWID5w4EVwF3jj1">
 
 
 <!-- NÚT QUÀ -->
@@ -316,6 +315,7 @@ src="https://lh3.googleusercontent.com/d/1O4MhiC9zSj4iDddMl3G-NHcDtaAZJUSM">
 /* hiện nút sau 10s */
 
 setTimeout(()=>{
+document.querySelector(".rose").style.display="none"
 document.getElementById("giftBtn").style.display="inline-block"
 },10000)
 
