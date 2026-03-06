@@ -44,10 +44,11 @@ z-index:2;
 
 .rose{
 width:480px;
-max-width:90%;
+max-width:95%;
 margin-top:80px;
-filter:drop-shadow(0 0 60px #ff2e6a);
+filter:drop-shadow(0 0 40px #ff2e6a);
 animation:roseIntro 10s forwards;
+image-rendering:auto;
 }
 
 @keyframes roseIntro{
@@ -55,13 +56,11 @@ animation:roseIntro 10s forwards;
 0%{
 transform:scale(.3);
 opacity:0;
-filter:blur(20px);
 }
 
 60%{
 transform:scale(1);
 opacity:1;
-filter:blur(0);
 }
 
 85%{
