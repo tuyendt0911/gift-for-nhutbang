@@ -2,7 +2,6 @@
 <html lang="vi">
 
 <head>
-
 <meta charset="UTF-8">
 <title>For Nhựt Băng ❤️</title>
 
@@ -44,10 +43,11 @@ z-index:2;
 /* hoa */
 
 .rose{
-width:460px;
+width:480px;
 max-width:90%;
-height:auto;
-image-rendering:auto;
+margin-top:80px;
+filter:drop-shadow(0 0 60px #ff2e6a);
+animation:roseIntro 10s forwards;
 }
 
 @keyframes roseIntro{
@@ -74,6 +74,7 @@ transform:scale(1.1);
 }
 
 }
+
 /* cánh hoa */
 
 .petal{
@@ -121,22 +122,14 @@ pointer-events:none;
 
 display:none;
 margin-top:40px;
-
 font-size:26px;
-
 background:linear-gradient(45deg,#ff004c,#ff6a8f);
 border:none;
-
 padding:18px 45px;
-
 border-radius:50px;
-
 color:white;
-
 cursor:pointer;
-
 box-shadow:0 0 35px #ff2d6f;
-
 transition:.3s;
 
 }
@@ -155,23 +148,14 @@ margin-top:40px;
 .letters span{
 
 display:inline-block;
-
 background:white;
-
 color:black;
-
 font-size:30px;
-
 margin:8px;
-
 padding:12px 20px;
-
 border-radius:12px;
-
 cursor:pointer;
-
 box-shadow:0 0 12px pink;
-
 transition:.25s;
 
 }
@@ -181,37 +165,24 @@ transform:scale(1.25);
 }
 
 #current{
-
 margin:25px;
-
 font-size:36px;
-
 letter-spacing:10px;
-
 color:#ffd1dc;
-
 }
 
 #result{
-
 margin-top:20px;
-
 font-size:30px;
-
 color:#ff7aa5;
-
 }
 
 /* voucher */
 
 #voucher{
-
 display:none;
-
 margin-top:40px;
-
 animation:cardOpen 1.5s ease;
-
 }
 
 @keyframes cardOpen{
@@ -234,21 +205,14 @@ font-size:42px;
 margin-bottom:30px;
 color:#ffd1dc;
 text-shadow:0 0 20px #ff2e6a,0 0 40px #ff2e6a;
-animation:loveGlow 2s infinite alternate;
 
-}
-
-@keyframes loveGlow{
-0%{transform:scale(1);}
-100%{transform:scale(1.05);}
 }
 
 #voucherImg{
 
 width:650px;
-
+max-width:95%;
 border-radius:20px;
-
 box-shadow:0 0 70px rgba(255,0,90,0.9);
 
 }
@@ -268,7 +232,7 @@ box-shadow:0 0 70px rgba(255,0,90,0.9);
 <!-- HOA -->
 
 <img class="rose"
-src="https://drive.google.com/uc?export=download&id=1201Gjl5tzh_hw-A4NkWID5w4EVwF3jj1">
+src="https://i.postimg.cc/bJdKdWxF/Chat-GPT-Image-00-13-02-7-thg-3-2026.png">
 
 
 <!-- NÚT QUÀ -->
@@ -276,9 +240,7 @@ src="https://drive.google.com/uc?export=download&id=1201Gjl5tzh_hw-A4NkWID5w4EVw
 <br>
 
 <button id="giftBtn">
-
 💌 Nhận quà tại đây nè Nhựt Băng
-
 </button>
 
 
@@ -301,10 +263,11 @@ src="https://drive.google.com/uc?export=download&id=1201Gjl5tzh_hw-A4NkWID5w4EVw
 
 <div id="voucher">
 
-<h2 id="loveText">Anh cũng yêu bé ❤️</h2>
+<h2 id="loveText">Anh cũng yêu bé ❤️, quà bé nè</h2>
 
 <img id="voucherImg"
-src="https://lh3.googleusercontent.com/d/1O4MhiC9zSj4iDddMl3G-NHcDtaAZJUSM">
+src="https://i.postimg.cc/tCGMHYMf/White-Yellow-Simple-Food-Voucher-Coupon.png">
+
 </div>
 
 </div>
@@ -312,7 +275,7 @@ src="https://lh3.googleusercontent.com/d/1O4MhiC9zSj4iDddMl3G-NHcDtaAZJUSM">
 
 <script>
 
-/* hiện nút sau 10s */
+/* hoa biến mất sau 10s + hiện nút */
 
 setTimeout(()=>{
 document.querySelector(".rose").style.display="none"
@@ -327,9 +290,7 @@ document.getElementById("giftBtn").onclick=function(){
 document.getElementById("game").style.display="block"
 
 }
-setTimeout(()=>{
-document.querySelector(".rose").style.display="none"
-},10000)
+
 
 /* cánh hoa */
 
@@ -412,7 +373,8 @@ function checkAnswer(){
 
 if(answer==="EMYÊUANH"){
 
-document.getElementById("result").innerHTML=""   // xoá dòng ở game
+document.getElementById("result").innerHTML=""
+
 document.getElementById("letters").style.display="none"
 
 setTimeout(()=>{
@@ -436,7 +398,6 @@ s.style.visibility="visible"
 })
 
 }
-
 
 }
 
